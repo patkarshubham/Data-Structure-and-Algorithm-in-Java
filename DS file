@@ -1,0 +1,111 @@
+                                                      DATA STRUCTURE AND ALGORITHM
+                                                      
+DATA STRUCTURE: is way to organize and store data
+
+TYPE OF DATA STRUCTURE:
+1.	Linear Data Structure
+	Array
+	Linked List
+	Stack
+	Queue
+2.	Non Linear Data Structure:
+	Tree
+	Graph
+
+ALGORITHM: Set of instructions to perform a task or to solve a given problem.
+Analysis of Algorithm  :  Several types of algorithm to solve the problem, deals in finding best algorithm which run fast and takes in less memory  .
+
+Ex- Find sum of first natural numbers.
+Like- Input n=4 so ouput : 1+2+3+4 =10
+
+Use 1 : Mathematics Formula
+public int findSum(int n){        //n=5
+return n*(n+1)/2;               // 5*(5+1)/2 => 5*6/2 => 5*3 => 15
+}
+
+Use 2: Algorithm
+public int findSum(int n){   //n=5
+int sum=0;
+for( int i=1; i<=n ; i++){  // check i less than 5 condition is true
+  sum=sum+i;   // sum = 0+1=1,   1+2=3,   3+3=6,   6+4=10,   10+5=15
+  }
+return sum; 
+}          
+
+How to check algorithm is best ?
+Two concepts applied to check algorithm best or not
+1.	Time Complexity : how much time taking to complete 
+	It’s amount of time taken by algorithm to run.
+	The input processed by an algorithm helps in determining the time complexity.
+……………………………………………………………………………………
+Time complexity of First Program 
+……………………………………………………………………………………
+public class time_Complexity {
+	public static void main(String[] args) {
+		double now=System.currentTimeMillis();
+		time_Complexity tc=new time_Complexity();
+		System.out.println(tc.findSum(1111));
+		System.out.println("time complexity: "+(System.currentTimeMillis()- now)+"millisecond.");
+	}
+public int findSum(int n) {
+		return n*(n+1)/2;
+	}
+}
+Output:
+
+617716
+time complexity: 0.0 millisecond.
+……………………………………………………………………………………
+Time complexity of second Prgram
+……………………………………………………………………………………
+public class time_Complexity {
+	public static void main(String[] args) {
+		double now=System.currentTimeMillis();
+		time_Complexity tc=new time_Complexity();
+		System.out.println(tc.findSum(1111));
+		System.out.println("time complexity: "+(System.currentTimeMillis()- now)+"millisecond.");
+	}
+	public int findSum(int n){   
+		int sum=0;
+		for( int i=1; i<=n ; i++){ 
+		  sum=sum+i;   
+		  }
+		return sum; 
+		}          
+
+}
+Output : 
+617716
+time complexity: 1.0 millisecond.
+--------------------------------------------------------------------------------
+
+2.	Space Complexity : how much memory to complete algorithm 
+	It’s amount of memory or space taken by algorithm to run.
+	The memory required to process the input by an algorithm helps in determining the space complexity.
+
+Asymptotic Analysis of an Algorithm :
+	Helps in evaluating performance of an algorithm in terms of input size & its increase.
+	Using asymptotic analysis we don’t measure actual running time of algorithm.
+	It helps in determining how time & space taken by algorithm increases with input size.
+
+Asymptotic notations : the mathematical tools used to describe the running time of an algorithm in terms of input size.
+Asymptotic Notations help us in determining -
+1.	Best case ( Omega (Ω) Notation )
+2.	Average case  ( Theta (θ) Notation )
+3.	Worst case ( Big O (O) Notation )
+
+Types of Asymptotic Notations : 3 notion for performing runtime analysis of an algorithm
+1, Omega (Ω) Notation : to express the lower bound of an algorithm running time. Lower bound means for any given input this notation determines best amount of time an algorithm can take to complete.
+Ex- If we say certain algorithm takes 10 sec as best amount of time. So, 10 sec will be lower bound of that algorithm The algorithm can take more than 10 sec but it will not take less than 10 sec.
+2. Big O (O) Notation : [ times depend upon your size of input ]to express the upper bound of an algorithm running time. Upper bound means for any given input this notation determines longest amount of time an algorithm can take to complete.
+
+Ex- If we say certain algorithm takes 10 sec as longest amount of time. So, 10 sec will be upper bound of that algorithm The algorithm can take less than 10 sec but it will not take more than 10 sec.
+Analysis of Time Complexity : 
+Rules of Big O Notation :
+-> 
+3. Theta (θ) Notation : to express the lower bound & upper bound of an algorithm running time. Lower & upper bound means for any given input this notation determines average amount of time an algorithm can take to complete.
+Ex- If we say certain algorithm it takes 10 sec for 1st Run,12 sec for 2nd run,11sec 3rd run and so on. So, the notation gives an average of running time of that algorithm.
+
+
+
+   
